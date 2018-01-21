@@ -1,0 +1,90 @@
+body {
+	overflow-x: hidden;
+}
+
+h1 {
+	font-family: tangerine;
+	font-size: 80px;
+	padding-top: 1rem;
+	padding-left: 1rem;
+	margin-top: 0px;
+}
+
+.runner {
+	position: absolute;
+	left: -10vw;
+	animation: run 10s linear infinite;
+	animation-delay: 3s;
+	width: 10vw;
+}
+
+@keyframes run {
+  0% {
+    left: -10vw;
+    bottom: 10vh;
+    transform: rotateY(0deg);
+  }
+  49%{
+    left: 100vw;
+    bottom: 20vh;
+    transform: rotateY(0deg);
+  }
+  50%{
+    left: 100vw;
+    bottom: 20vh;
+    transform: rotateY(180deg);
+  }
+  99%{
+    left: -10vw;
+    bottom: 10vh;
+    transform: rotateY(180deg);
+  }
+  100%{
+    left: -10vw;
+    bottom: 10vh;
+    transform: rotateY(0deg);
+  }
+}
+
+.howler {
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	background-color: white;
+	position: absolute;
+	top: 100%;
+	width:100%;
+	height: 0vh;
+	max-width: 100vh;
+	max-height: 100vw;
+	animation: disappear 3s ease-in;
+}
+
+@keyframes disappear {
+  from {
+  	top: 0;
+  	height: 100vh;
+	}
+  to {
+  	top: 100%;
+  	height: 0vh;
+  }
+}
+
+.crest {
+	animation: reduce 3s ease-in;
+	animation-delay: .4s;
+	width: 5vw;
+	position: relative;
+}
+
+@keyframes reduce {
+  from {
+  	width: 50vw;
+  	left: 25vw;
+  }
+  to {
+  	left: 0vw;
+  	width: 5vw
+  }
+}
