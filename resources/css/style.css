@@ -80,7 +80,7 @@ h1 {
   	height: 100vh;
 	}
   to {
-  	top: 100%;
+  	top: 100vh;
   	height: 0vh;
   }
 }
