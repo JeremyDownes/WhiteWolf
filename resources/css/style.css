@@ -8,6 +8,10 @@ body {
 	overflow: hidden;
 }
 
+.body {
+	overflow: hidden;	
+}
+
 h1 {
 	font-family: tangerine;
 	font-size: 4rem;
