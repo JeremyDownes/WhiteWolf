@@ -14,9 +14,44 @@ $(document).ready( function() {
 	 'and a place to share my passions.',
 	 'Welcome and I hope you enjoy it.'
 	]
+
 	let message = []
 	let count = 0
 	let msgNum = 0
+	let y = 20
+	
+	setInterval(()=>{
+		y = Math.floor(Math.random()*80)
+		console.log(y)
+	},3000)
+	
+  setTimeout(()=>{$('.crest')
+  	.animate({width: '5vw', left: '0px'},5000)
+  },2000)
+
+	$('.story').animate({top: '-110rem'},45000,'swing')
+	$('.howler').animate({top: '100vh' ,height: '0px'},7000)
+
+	setInterval(()=>{
+		$('.runner')
+		.animate({left: "130vw", bottom: y+"vh"},6000)
+	},6000)
+
+	setInterval(()=>{
+		$('.runner').css({"-webkit-transform": "rotateY(0deg)", zIndex: `${Math.floor(Math.random()*2)}`})
+	},6000)
+
+	setTimeout( function() {
+		setInterval(()=>{$('.runner')
+			.animate({left: '-30vw', bottom: y+'vh'},6000)
+		},6000)
+	},6000)
+
+	setTimeout( function() {
+		setInterval(()=>{
+			$('.runner').css({"-webkit-transform": "rotateY(180deg)", zIndex: `${Math.floor(Math.random()*2)}`})
+		},12000)
+	},6000)
 
 	setTimeout( function() {
 		var msgInterval = setInterval(function() {
@@ -37,7 +72,7 @@ $(document).ready( function() {
 			  $('.greeting').text('')
 			}
 		},200)
-	}, 48000)
+	}, 40000)
 
 
 })
