@@ -21,8 +21,7 @@ $(document).ready( function() {
 	let y = 20
 	
 	setInterval(()=>{
-		y = Math.floor(Math.random()*80)
-		console.log(y)
+		y = Math.floor(Math.random()*40+40)
 	},3000)
 	
   setTimeout(()=>{$('.crest')
