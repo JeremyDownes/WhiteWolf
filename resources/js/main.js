@@ -1,10 +1,11 @@
 $(document).ready( function() {
 	let number = -1
-	const wolf = setInterval(function() {
+
+	/*const wolf = setInterval(function() {
 		number++
 		$('.runner').attr('src',`resources/images/run${number}.png`)
 		number= number%5
-	},150)
+	},150)*/
 
 	let greetingMessage = [
 	 'Hello and thank you for visiting.',
@@ -32,23 +33,21 @@ $(document).ready( function() {
 	$('.howler').animate({top: '100vh' ,height: '0px'},7000)
 
 	setInterval(()=>{
-		$('.runner')
-		.animate({left: "130vw", bottom: y+"vh"},6000)
+		$('.runner').animate({left: "130vw", bottom: y+"vh"},6000)
 	},6000)
 
 	setInterval(()=>{
-		$('.runner').css({"-webkit-transform": "rotateY(0deg)", zIndex: `${Math.floor(Math.random()*2)}`})
+		$('.runner').attr('src','resources/images/runRight.gif').css({zIndex: Math.floor(Math.random()*2)})
 	},6000)
 
 	setTimeout( function() {
-		setInterval(()=>{$('.runner')
-			.animate({left: '-30vw', bottom: y+'vh'},6000)
+		setInterval(()=>{$('.runner').animate({left: '-30vw', bottom: y+'vh'},6000)
 		},6000)
 	},6000)
 
 	setTimeout( function() {
 		setInterval(()=>{
-			$('.runner').css({"-webkit-transform": "rotateY(180deg)", zIndex: `${Math.floor(Math.random()*2)}`})
+		$('.runner').attr('src','resources/images/runLeft.gif').css({zIndex: Math.floor(Math.random()*2)})
 		},12000)
 	},6000)
 
