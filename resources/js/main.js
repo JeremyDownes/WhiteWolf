@@ -1,11 +1,4 @@
 $(document).ready( function() {
-	let number = -1
-
-	/*const wolf = setInterval(function() {
-		number++
-		$('.runner').attr('src',`resources/images/run${number}.png`)
-		number= number%5
-	},150)*/
 
 	let greetingMessage = [
 	 'Hello and thank you for visiting.',
@@ -16,6 +9,10 @@ $(document).ready( function() {
 	 'Welcome and I hope you enjoy it.'
 	]
 
+	if(window.innerHeight > window.innerWidth) {
+		$('html').css({fontSize: '1vh'})
+	}
+
 	let message = []
 	let count = 0
 	let msgNum = 0
@@ -25,29 +22,23 @@ $(document).ready( function() {
 		y = Math.floor(Math.random()*40+40)
 	},3000)
 	
+
+
   setTimeout(()=>{$('.crest')
   	.animate({width: '5vw', left: '0px'},5000)
   },2000)
 
-	$('.story').animate({top: '-110rem'},45000,'swing')
+	$('.story').animate({top: '-215vh'},60000,'swing')
 	$('.howler').animate({top: '100vh' ,height: '0px'},7000)
 
 	setInterval(()=>{
-		$('.runner').animate({left: "130vw", bottom: y+"vh"},6000)
-	},6000)
+		$('.runner').attr('src','resources/images/runRight.gif').animate({left: "130vw", bottom: y+"vh"},6000).css({zIndex: Math.floor(Math.random()*2)})
+	},12000)
 
-	setInterval(()=>{
-		$('.runner').attr('src','resources/images/runRight.gif').css({zIndex: Math.floor(Math.random()*2)})
-	},6000)
-
-	setTimeout( function() {
-		setInterval(()=>{$('.runner').animate({left: '-30vw', bottom: y+'vh'},6000)
-		},6000)
-	},6000)
 
 	setTimeout( function() {
 		setInterval(()=>{
-		$('.runner').attr('src','resources/images/runLeft.gif').css({zIndex: Math.floor(Math.random()*2)})
+		$('.runner').attr('src','resources/images/runLeft.gif').animate({left: '-30vw', bottom: y+'vh'},6000).css({zIndex: Math.floor(Math.random()*2)})
 		},12000)
 	},6000)
 
@@ -70,7 +61,7 @@ $(document).ready( function() {
 			  $('.greeting').text('')
 			}
 		},200)
-	}, 40000)
+	}, 55000)
 
 
 })

@@ -57,6 +57,7 @@ h1 {
 	z-index: 0;
 	position: relative;
 	top: 100vh;
+	bottom: auto;
 	padding: 0 20vw;
 	font-family: Courgette;
 	font-size: 2rem;
@@ -77,14 +78,20 @@ h1 {
 	text-align: center;
 	width: 100%;
 }
-
+.hamster {
+	height:10rem;
+	background-color: red;
+	position: absolute;
+	left: 50%;
+	top: 50vh;
+}
 iframe{
 	height: 0px;
 	width: 0px;
 	margin-left: 5vw;
 	position: absolute;
 	top: 12vh;
-	animation: rise 5s linear 105s;
+	animation: rise 5s linear 118s;
 	animation-fill-mode: forwards;
 }
 
